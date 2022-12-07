@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login | Layanan Masyarakat</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img class="logo" src="assets/Logo_bantul.png" style="height: 65px;width: 70px;" alt="">
+                </a>
+                <p class="navbar-brand"><b>Desa Bawuran</b><br>Kabupaten Bantul</p>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse">
+                    <!-- Nav -->
+                    <div class="navbar-nav mx-lg-auto">
+                      <!-- <a class="nav-item nav-link active" href="#" aria-current="page">Home</a> -->
+                      <!-- <a class="nav-item nav-link" href="index.html" style="color:black ;"><b>BERANDA</b></a>
+                      <a class="nav-item nav-link" href="tentang.html" style="color:black ;"><b>TENTANG</b></a>
+                      <a class="nav-item nav-link" href="kontak.html" style="color:black ;"><b>HUBUNGI KAMI</b></a> -->
+                    </div>
+                    <!-- Right navigation -->
+                    <div class="navbar-nav ms-lg-4">
+                      <a class="nav-item nav-link text-primary;" style="color: black ;" href="index.html"><b>BERANDA</b></a>
+                    <a class="nav-item nav-link text-primary;" style="color: black ;" href="tentang.html"><b>TENTANG</b></a>
+                    <a class="nav-item nav-link text-primary;" style="color: black ;" href="kontak.html"><b>HUBUNGI KAMI</b></a>
+                    </div>
+                    <!-- <div class="d-flex align-items-lg-center ms-3 mt-3 mt-lg-0">
+                      <a href="signup.html" class="btn w-full w-lg-auto" style="color:black ;"><b>
+                        DAFTAR
+                      </b></a>
+                    </div> -->
+                </div>
+            </div>
+        </nav>
+    </main>
+    
+    <div class="container">
+        <div class="sign-in-box">
+            <div class="card-body">
+                <form name="formLogin" action="daftar.php" method="post" onsubmit="return validateForm()">
+                    <h3 class="text-center">LOGIN</h3>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" name="email" placeholder="Email yang digunakan" class="form-control">
+                        <small id="emailHelp" class="form-text text-muted">Email Akan Digunakan Untuk Mengirimkan Notifikasi.</small>
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" name="password" placeholder="Enter your password" class="form-control" minlength="3">
+                    </div>
+                    <div class="text-center">
+                        <a class="btn btn-primary" style="background-color:grey;" href="signup.html">Register</a>
+                        <button type="submit" class="btn btn-primary">Masuk</button>
+                        <a class="nav-item nav-link" href="forgotpassword.html" style="color:black;"><b>Lupa Password?</b></a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        function validateForm() {   
+            if (document.forms["formLogin"]["email"].value == "") {
+                alert("Email Tidak Boleh Kosong");
+                document.forms["formLogin"]["email"].focus();
+                return false;
+            }
+            if (document.forms["formLogin"]["password"].value == "") {
+                alert("password Tidak Boleh Kosong");
+                document.forms["formLogin"]["password"].focus();
+                return false;
+            }
+        }
+    </script>
+    
+</body>
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-9">
+                <i class="fa fa-location-dot"></i>
+                <p><span class="glyphicon glyphicon-map-marker"></span>Kelurahan Bawuran, Kapanewon Pleret, Kabupaten
+                    Bantul, D.I.Yogyakarta
+                    <br>Tagelrejo RT.04, Bawuran, Pleret, Bantul, Bantul, Telp.(0274) 441168
+                </p>
+            </div>
+            <div class="col-3">
+                <p>Temukan kami di: </p>
+            </div>
+        </div>
+    </div>
+</footer>
+</html>

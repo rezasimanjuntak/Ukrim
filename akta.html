@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Akta Kematian | Layanan Masyarakat</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<div class="text-center">
+</div>
+<body>
+    <main>
+        <nav class="navbar navbar-expand-lg bg-transparent">
+            <div class="container">
+                <a class="navbar-brand" href="#"><img class="logo" src="assets/Logo_bantul.png" style="height: 65px;width: 70px;" alt=""></a>
+                <p class="navbar-brand"><b>Desa Bawuran</b><br>Kabupaten Bantul</p>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse">
+                    <!-- Nav -->
+                    <div class="navbar-nav mx-lg-auto">
+                      <!-- <a class="nav-item nav-link active" href="#" aria-current="page">Home</a> -->
+                      <a class="nav-item nav-link" href="index.html" style="color:black ;"><b>BERANDA</b></a>
+                      <a class="nav-item nav-link" href="tentang.html" style="color:black ;"><b>TENTANG</b></a>
+                      <a class="nav-item nav-link" href="kontak.html" style="color:black ;"><b>HUBUNGI KAMI</b></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </main>
+<section>
+    <nav>
+        
+    </nav>
+</section>
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+                <div class="text-center mb-4">
+                    <h3>AKTA KEMATIAN</h3>
+                </div>
+                <form name="formAkta" action="daftar.php" method="post" onsubmit="return validateForm()">
+
+                    <div class="form-group">
+                        <label>Nama Kelurahan</label>
+                        <input type="text" name="namakelurahan" placeholder="Masukan Nama Kelurahan" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Nama Jenazah</label>
+                        <input type="text" name="namajenazah" placeholder="Masukan Nama Jenazah" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Tanggal Lahir Jenazah</label>
+                        <input type="date" name="tanggallahir" placeholder="Masukan Tanggal Lahir Jenazah" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label>NIK Jenazah</label>
+                        <input type="text" name="nikjenzah" placeholder="Masukan NIk Jenazah" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Masyarakat Yang Melapor</label>
+                        <input type="text" name="lapor" placeholder="Nama Yang Melapor" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Surat Pengantar RT/RW</label>
+                        <input type="file" name="suratpengantar" placeholder="Surat Pengantar" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Pihak Yang Menerangkan</label>
+                        <input type="text" name="pihakpelapor" placeholder="Pihak Yang Melapor" class="form-control" minlength="3">
+                    </div>
+
+                    <div class="form-group text-center">
+                        <button type="submit" class="btn btn-primary">Simpan</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+    </div>
+    <script>
+        function validateForm() {   
+            if (document.forms["formAkta"]["namakelurahan"].value == "") {
+                alert("Nama Kelurahan Tidak Boleh Kosong");
+                document.forms["formAkta"]["namakelurahan"].focus();
+                return false;
+            }
+            if (document.forms["formAkta"]["namajenazah"].value == "") {
+                alert("Nama Jenazah Tidak Boleh Kosong");
+                document.forms["formAkta"]["namajenazah"].focus();
+                return false;
+            }
+            if (document.forms["formAkta"]["tanggallahir"].value == "") {
+                alert("Tanggal Lahir Tidak Boleh Kosong");
+                document.forms["formAkta"]["tanggallahir"].focus();
+                return false;
+            }
+            if (document.forms["formAkta"]["nikjenzah"].value == "") {
+                alert("NIK Jenazah Tidak Boleh Kosong");
+                document.forms["formAkta"]["nikjenzah"].focus();
+                return false;
+            }
+            if (document.forms["formAkta"]["lapor"].value == "") {
+                alert("Masyarakat yang melapor Tidak Boleh Kosong");
+                document.forms["formAkta"]["lapor"].focus();
+                return false;
+            }
+            if (document.forms["formAkta"]["suratpengantar"].value == "") {
+                alert("Surat Pengantar Tidak Boleh Kosong");
+                document.forms["formAkta"]["suratpengantar"].focus();
+                return false;
+            }
+            if (document.forms["formAkta"]["pihakpelapor"].value == "") {
+                alert("Pihak pelapor Tidak Boleh Kosong");
+                document.forms["formAkta"]["pihakpelapor"].focus();
+                return false;
+            }
+        }
+    </script>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-9">
+                    <p><span class="glyphicon glyphicon-map-marker"></span>Kelurahan Bawuran, Kapanewon Pleret, Kabupaten Bantul, D.I.Yogyakarta 
+                        <br>Tagelrejo RT.04, Bawuran, Pleret, Bantul, Bantul, Telp.(0274) 441168</p>
+                </div>
+            <div class="col-3">
+                    <p>Temukan kami di: </p>
+            </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

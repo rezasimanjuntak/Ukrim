@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>layanan masyarakat</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<div class="text-center">
+</div>
+<body>
+    <main>
+        <nav class="navbar navbar-expand-lg bg-transparent">
+            <div class="container">
+                <a class="navbar-brand" href="#"><img class="logo" src="assets/Logo_bantul.png" style="height: 65px;width: 70px;" alt=""></a>
+                <p class="navbar-brand"><b>Desa Bawuran</b><br>Kabupaten Bantul</p>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse">
+                    <!-- Nav -->
+                    <div class="navbar-nav mx-lg-auto">
+                      <!-- <a class="nav-item nav-link active" href="#" aria-current="page">Home</a> -->
+                      <a class="nav-item nav-link" href="index.html" style="color:black ;"><b>BERANDA</b></a>
+                      <a class="nav-item nav-link" href="tentang.html" style="color:black ;"><b>TENTANG</b></a>
+                      <a class="nav-item nav-link" href="kontak.html" style="color:black ;"><b>HUBUNGI KAMI</b></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        
+    </main>
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+                <div class="text-center mb-5">
+                    <h3>SURAT KETERANGAN <br>DOMISILI</h3>
+                </div>
+
+                <form name="formAkta" action="daftar.php" method="post" onsubmit="return validateForm()">
+                    <div><label>Nama Pengaju</label>
+                        <input type="text" name="namajenazah" placeholder="Masukan Nama Pengaju" class="form-control">
+                    </div>
+                    <div><label>NIK</label>
+                        <input type="text" name="nIK" placeholder="Masukan NIK Pengaju" class="form-control">
+                    </div>
+                    <div><label>Alamat</label>
+                        <input type="text" name="alamattujuan" placeholder="Masukan Alamat Saat Ini" class="form-control">
+                    </div>
+                    <div><label>Fotocopy KTP</label>
+                        <input type="file" name="fotocopyktp" placeholder="Fotocopy Ktp" class="form-control">
+                    </div>
+                    <div><label>Fotocopy Kartu Keluarga</label>
+                        <input type="file" name="fotocopykk" placeholder="Fotocopy Kartu Keluarga" class="form-control">
+                    </div>
+                    <div><label>Surat Pengantar dari RT/RW</label>
+                        <input type="file" name="suratpengantar" placeholder="Surat Pengantar" class="form-control">
+                    </div>        
+                    <br>
+                    <br>       
+                    <div class="text-center">
+                        <button type="danger" class="btn btn-primary">Kembali</button>
+                        
+                        <button type="submit" class="btn btn-primary">Simpan</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+    </div>
+    <script>
+        function validateForm() {   
+            if (document.forms["formAkta"]["namakelurahan"].value == "") {
+                alert("Nama Kelurahan Tidak Boleh Kosong");
+                document.forms["formAkta"]["namakelurahan"].focus();
+                return false;
+            }
+            if (document.forms["formAkta"]["namajenazah"].value == "") {
+                alert("Nama Jenazah Tidak Boleh Kosong");
+                document.forms["formAkta"]["namajenazah"].focus();
+                return false;
+            }
+            if (document.forms["formAkta"]["tanggallahir"].value == "") {
+                alert("Tanggal Lahir Tidak Boleh Kosong");
+                document.forms["formAkta"]["tanggallahir"].focus();
+                return false;
+            }
+            if (document.forms["formAkta"]["nikjenzah"].value == "") {
+                alert("NIK Jenazah Tidak Boleh Kosong");
+                document.forms["formAkta"]["nikjenzah"].focus();
+                return false;
+            }
+            if (document.forms["formAkta"]["lapor"].value == "") {
+                alert("Masyarakat yang melapor Tidak Boleh Kosong");
+                document.forms["formAkta"]["lapor"].focus();
+                return false;
+            }
+            if (document.forms["formAkta"]["suratpengantar"].value == "") {
+                alert("Surat Pengantar Tidak Boleh Kosong");
+                document.forms["formAkta"]["suratpengantar"].focus();
+                return false;
+            }
+            if (document.forms["formAkta"]["pihakpelapor"].value == "") {
+                alert("Pihak pelapor Tidak Boleh Kosong");
+                document.forms["formAkta"]["pihakpelapor"].focus();
+                return false;
+            }
+        }
+    </script>
+    <footer class="footer mt-auto py-3" style="position: absolute; width: 100%; background-color:darkgrey;">
+    <div class="container text-center col-lg-4">
+        <div class="row">
+            <div class="col mr-auto">
+                <p><span class="glyphicon glyphicon-map-marker"></span>Kelurahan Bawuran, Kapanewon Pleret, Kabupaten Bantul, D.I.Yogyakarta <br>Tagelrejo RT.04, Bawuran, Pleret, Bantul, Bantul, Telp.(0274) 441168</p>
+            </div>
+           <div class="col-auto">
+
+           </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
